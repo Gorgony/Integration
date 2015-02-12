@@ -1,0 +1,11 @@
+# use glob syntax.
+syntax: glob
+.idea
+*.iml
+*.elc
+*.pyc
+*~
+
+# switch to regexp syntax.
+syntax: regexp
+^\.pc/
