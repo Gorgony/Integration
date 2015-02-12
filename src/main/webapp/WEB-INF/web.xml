@@ -2,7 +2,8 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
   <display-name>V2IAC1-14 sample application</display-name>
 
     <servlet>
@@ -45,5 +46,16 @@
         <servlet-name>V2IAC1-14 Web services</servlet-name>
         <url-pattern>/google/*</url-pattern>
     </servlet-mapping>
+
+    <filter>
+        <filter-name>FilterForSecurity</filter-name>
+        <filter-class>nl.hu.v2iac1.filter.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterForSecurity</filter-name>
+        <url-pattern>/secure/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
 
 </web-app>
