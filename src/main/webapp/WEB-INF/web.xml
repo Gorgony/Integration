@@ -42,18 +42,43 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
+    <servlet>
+        <servlet-name>verifyLogin</servlet-name>
+        <servlet-class>nl.hu.v2iac1.servlets.verifyLogin
+        </servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>V2IAC1-14 Web services</servlet-name>
-        <url-pattern>/google/*</url-pattern>
+        <servlet-name>verifyLogin</servlet-name>
+        <url-pattern>/verifyLogin.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <servlet-class>nl.hu.v2iac1.servlets.indexServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>nl.hu.v2iac1.servlets.logoutServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout.do</url-pattern>
     </servlet-mapping>
 
     <filter>
         <filter-name>FilterForSecurity</filter-name>
-        <filter-class>nl.hu.v2iac1.filter.SecurityFilter</filter-class>
+        <filter-class>nl.hu.v2iac1.servlets.SecurityFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>FilterForSecurity</filter-name>
-        <url-pattern>/secure/*</url-pattern>
+        <url-pattern>/rest/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
