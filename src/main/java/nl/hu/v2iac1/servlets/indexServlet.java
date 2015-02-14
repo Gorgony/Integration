@@ -49,10 +49,10 @@ public class indexServlet extends HttpServlet {
         }
         out.println("<h2>Muhaha!</h2>\n" +
                 "<ul>\n" +
-                "    <li>Deze <a href=\"rest/public/\">link</a> mag publiek zijn.</li>\n" +
-                "    <li>Deze <a href=\"rest/secret/\">link</a> moet met een username/password beveiligd worden. (+3 pt)</li>\n" +
-                "    <li>Deze <a href=\"rest/verysecret\">link</a> moet via een externe identity provider beveiligd worden. (+3 pt)</li>\n" +
-                "    <li>Deze <a href=\"rest/topsecret/\">link</a> moet met two-factor authenticatie beveiligd worden. (+3 pt)</li>\n" +
+                "    <li>Deze <a href=\"/int/rest/public/\">link</a> mag publiek zijn.</li>\n" +
+                "    <li>Deze <a href=\"/int/rest/secret/\">link</a> moet met een username/password beveiligd worden. (+3 pt)</li>\n" +
+                "    <li>Deze <a href=\"/int/rest/verysecret\">link</a> moet via een externe identity provider beveiligd worden. (+3 pt)</li>\n" +
+                "    <li>Deze <a href=\"/int/rest/topsecret/\">link</a> moet met two-factor authenticatie beveiligd worden. (+3 pt)</li>\n" +
                 "</ul>\n" +
                 "</body>\n" +
                 "</html>");
